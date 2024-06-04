@@ -88,21 +88,26 @@ document.title="Daraz-Login"
 
 var signform = document.getElementById("qwetvdtc")
 var loginform = document.getElementById("igujsz")
-
-function a(){
+document.getElementById("uqgyuikskihys8ixkgwi").addEventListener("click",()=>{
     loginform.style.display="none"
     signform.style.display="block"
     signform.style.display="flex"
     signform.style.justifyContent="center"
     document.title="Daraz-SignUp"
-}
-function b(){
+    document.getElementById("popup").style.display="none"
+})
+
+
+document.getElementById("onclick").addEventListener("click",()=>{
+    
     loginform.style.display="block"
     signform.style.display="none"
     loginform.style.display="flex"
     loginform.style.justifyContent="center"
     document.title="Daraz-Login"
-}
+    document.getElementById("popup").style.display="none"
+})
+
 
 
     var input = document.querySelector("#searchinput");
@@ -132,8 +137,54 @@ function b(){
     //     document.querySelector(".searchdata").innerHTML = clutter;
     // })
 
+    var swiper = new Swiper(".mySwiper", {
+        spaceBetween: 30,
+        centeredSlides: true,
+        autoplay: {
+          delay: 2500,
+          disableOnInteraction: false,
+        },
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+        },
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+      });
+
+
+
+
+
+// 
+
+
+
 
 })
+
+
+var imk = ["https://icms-image.slatic.net/images/ims-web/04ad7559-e98d-4445-8781-70cfdf4ca938.jpg_1200x1200.jpg","https://icms-image.slatic.net/images/ims-web/495ae49c-b1c1-437e-ac0e-788a0123959d.jpeg","https://icms-image.slatic.net/images/ims-web/e1111741-2a26-4c79-bbdf-f66cc5a5ecc0.png","https://icms-image.slatic.net/images/ims-web/7abefc2d-0044-490c-896f-4b83c42a3e9b.jpeg",]
+
+var math =imk[Math.floor(Math.random()*imk.length)]
+for (let i = 0; i < 100; i++) {
+    setTimeout(() => {
+    console.log(math);
+document.getElementById("popup").innerHTML=`
+
+<div class="papapop">
+<div class="pophe">
+  <p></p>
+<p style=" background:linear-gradient(90deg,#00dbde,#fc00ff);
+-webkit-background-clip:text;
+-webkit-text-fill-color:transparent;font-size: 25px;font-weight: 700;">Ads</p><i style="font-size: 38px; cursor: pointer;color: black;" class="ri-close-line"></i></div>
+<div class="pobo"><img id="poplop" src="${math}" alt=""></div><br>
+</div>
+`
+}, 5000);
+}
 // function onFunction() {
 //     alert ("Your browser is working online.");
     
@@ -169,13 +220,22 @@ function onFunction(){
 }
 function offFunction(){
     var oiuytr = document.getElementById("plojin")
+    var ub = document.getElementById("cokolop")
     document.title="Daraz-Offline"
     oiuytr.style.display="block"
     oiuytr.style.display="flex"
+    document.getElementById("popup").style.display="none"
     oiuytr.style.justifyContent="center"   
     oiuytr.style.alignItems="center"   
+    
+ 
     var werfghnbvcvbnmmnbgtyhb= document.getElementById("ssdsdsd")
     werfghnbvcvbnmmnbgtyhb.style.display="none"
+    var signform = document.getElementById("qwetvdtc")
+    var loginform = document.getElementById("igujsz")
+    
+    
+    loginform.style.display="none"
 }
 
-handleSearchFunctionality();
+

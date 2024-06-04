@@ -231,6 +231,14 @@ text-align: center;
     width: 100%;
     height: 100%;
 }
+#class{
+    font-size: 39px;
+    color: white;  transition: all ease-in-out 0.3s;
+}
+#class:hover{
+      color:#ffffffc2;
+}
+
 .fullcover{
     display: flex;
     justify-content: center;
@@ -240,6 +248,8 @@ height: 100%;
 }
 .nav{
     width: 100%;
+    top: 0;
+    position: sticky;
    
     background-color: #F85606;
 display: flex;
@@ -249,8 +259,32 @@ align-items: center;
 #popup{
     width: 100%;
     height: 100%;
-    background-color: yellow;
-    display: none;
+    /* background-color: rgba(255, 255, 0, 0.274); */
+ display: flex;justify-content: center;
+ align-items: center;
+ position: absolute;display: none;
+}
+.papapop{
+    width: 50%;
+    height: 40%;
+    background-color: #fff;
+    /* position: absolute; */
+border-radius: 10px;overflow: hidden;
+padding: 10px;
+}
+#poplop{
+    width: 100%;
+    height: 100%;
+}.pophe{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+
+}.pobo{
+    width: 100%;
+    height: 80%;
+    background-color: white;
+/* padding-bottom: 10px; */
 }
 .navigation{
     width: 100%;
@@ -259,43 +293,49 @@ align-items: center;
     justify-content: space-between;
     align-items: center;
 }
-.header{
+#logout{
+  
+    background-color: rgba(0, 0, 0, 0.329);
+    color: #fff;
+    font-size: 18px;
+    font-weight: 700;
+    border-radius: 10px;
+}
+.ffpage {
+    position: absolute;
     width: 100%;
-    display: flex;
-    justify-content: space-between;
+    height: 70%;
+    z-index: -1; /* Ensure the slider is behind other elements */
 }
-.header ul{
-    
-    display: flex;
-    gap: 20px;
-   list-style-type: none;
-}
-.header ul li{
-    cursor: pointer;
-    color: #fff;
-    transition: all ease-in-out 0.3s;
-    font-size: 14px;
-}
-.header ul li:hover{
-    color:#ffffffc2;
-}
-.header button{
+
+.swiper {
+      width: 100%;
+      height: 100%;
+    }
+
+.swiper-slide {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
     height: 100%;
-    display: flex;
-    text-align: center;
-    gap: 10px;
-    border: none;
-    outline: none;
+}
+
+.nav .dropdown-menu {
+    position: absolute;
+    z-index: 9999; /* Ensure dropdown is above all other content */
+}
+
+.nav .dropdown-toggle {
     cursor: pointer;
-    background-color: #0000007c;
-    color: #fff;
-    font-size: 12px;
-    padding: 5px 10px 5px 10px;
-    border-radius: 6px; transition: all ease-in-out 0.3s;
 }
-.header button img{
-    width: 25px;height: 25px;border-radius: 7px;
-}
+
+    .swiper-slide img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
 #rszxcghvbvhyfyjb{
  display: none;
 }
@@ -330,6 +370,7 @@ font-size: 10px;
     }
     .header ul li{
         font-size: 6px;
+        
        }
    .navigation{
     flex-direction:column-reverse;
@@ -347,4 +388,23 @@ font-size: 10px;
   .nav{
    padding-bottom: 10px;
   }
+}
+@media screen and (max-width: 390px) {
+  .header ul{
+    
+    display: flex;
+    gap: 10px;
+font-size: 5px;
+   /* list-style-type: none; */
+}
+.header button{
+padding: 0px;
+height: 0%;text-align: center;
+font-size: 8px;
+  }
+}
+@media screen and (max-width: 720px) {
+    .ffpage{
+        height: 40%;
+    }
 }
