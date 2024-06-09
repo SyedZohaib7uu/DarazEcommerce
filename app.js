@@ -1,37 +1,28 @@
 document.addEventListener('DOMContentLoaded', (event) => {
-    const nameWrapper = document.getElementById("nameWrapperlop");
-    const nameInput = document.getElementById("namellolkihg");
-    const emailWrapper = document.getElementById("emailWrapperskjbb");
-    const emailInput = document.getElementById("emaillskbiuv");
-    const passwordWrapper = document.getElementById("passwordWrappuguers");
-    const passwordInput = document.getElementById("passhjvhvls");
-    const emailClearIcon = document.getElementById("ljkflhvuyvyvyjkf");
-    const passwordClearIcon = document.getElementById("hhvhhhihy074");
-    const nameci = document.getElementById("ljkjjjjjgctxf");
-    const togglePasswordIcon = document.getElementById("closeeyhhhe");
+ 
+    const emailWrapper = document.getElementById("emailWrapperw");
+    const emailInput = document.getElementById("emaillw");
 
-    nameInput.addEventListener('focus', () => {
-        nameWrapper.classList.add('active');
-    });
+    const emailClearIcon = document.getElementById("hyvcuniw");
+    const passwordWrapper = document.getElementById("passwordWrapperw");
+    const passwordInput = document.getElementById("passlw");
+    const passwordClearIcon = document.getElementById("hyvchyvc");
+    
+    const togglePasswordIcon = document.getElementById("closeeyee");
 
-    nameInput.addEventListener('blur', () => {
-        nameWrapper.classList.remove('active');
-    });
 
+
+
+
+    const togglePasswordIconn = document.getElementById("closeeyhhhe");
+
+    // Email input event listeners
     emailInput.addEventListener('focus', () => {
         emailWrapper.classList.add('active');
     });
 
     emailInput.addEventListener('blur', () => {
         emailWrapper.classList.remove('active');
-    });
-
-    passwordInput.addEventListener('focus', () => {
-        passwordWrapper.classList.add('active');
-    });
-
-    passwordInput.addEventListener('blur', () => {
-        passwordWrapper.classList.remove('active');
     });
 
     emailInput.addEventListener('input', () => {
@@ -46,17 +37,14 @@ document.addEventListener('DOMContentLoaded', (event) => {
         emailInput.value = "";
         emailClearIcon.style.display = 'none';
     });
-    nameInput.addEventListener('input', () => {
-        if (nameInput.value) {
-            nameci.style.display = 'block';
-        } else {
-            nameci.style.display = 'none';
-        }
+
+    // Password input event listeners
+    passwordInput.addEventListener('focus', () => {
+        passwordWrapper.classList.add('active');
     });
 
-    nameci.addEventListener("click", () => {
-        nameInput.value = "";
-        nameci.style.display = 'none';
+    passwordInput.addEventListener('blur', () => {
+        passwordWrapper.classList.remove('active');
     });
 
     passwordInput.addEventListener('input', () => {
@@ -83,7 +71,130 @@ document.addEventListener('DOMContentLoaded', (event) => {
             togglePasswordIcon.classList.add("ri-eye-close-fill");
         }
     });
-    
+    togglePasswordIconn.addEventListener("click", () => {
+        if (document.getElementById("passhjvhvls").type === 'password') {
+            document.getElementById("passhjvhvls").type = "text";
+            togglePasswordIconn.classList.remove("ri-eye-close-fill");
+            togglePasswordIconn.classList.add("ri-eye-line");
+        } else {
+            document.getElementById("passhjvhvls").type = "password";
+            togglePasswordIconn.classList.remove("ri-eye-line");
+            togglePasswordIconn.classList.add("ri-eye-close-fill");
+        }
+    });
+
+    document.getElementById("namellolkihg").addEventListener('focus', () => {
+        document.getElementById("nameWrapperlop").classList.add('active');
+    });
+
+    document.getElementById("namellolkihg").addEventListener('blur', () => {
+        document.getElementById("nameWrapperlop").classList.remove('active');
+    });
+
+
+    document.getElementById("emaillskbiuv").addEventListener('focus', () => {
+        document.getElementById("emailWrapperskjbb").classList.add('active');
+    });
+
+    document.getElementById("emaillskbiuv").addEventListener('blur', () => {
+        document.getElementById("emailWrapperskjbb").classList.remove('active');
+    });
+
+
+    document.getElementById("passhjvhvls").addEventListener('focus', () => {
+        document.getElementById("passwordWrappuguers").classList.add('active');
+    });
+
+    document.getElementById("passhjvhvls").addEventListener('blur', () => {
+        document.getElementById("passwordWrappuguers").classList.remove('active');
+    });
+
+
+    document.getElementById("passll").addEventListener('focus', () => {
+        document.getElementById("birthWrapper").classList.add('active');
+    });
+
+    document.getElementById("passll").addEventListener('blur', () => {
+        document.getElementById("birthWrapper").classList.remove('active');
+    });
+   
+
+
+    document.getElementById("emaillw").addEventListener('input', () => {
+        if (document.getElementById("emaillw").value) {
+            document.getElementById("hyvcuniw").style.display = 'block';
+        } else {
+            document.getElementById("hyvcuniw").style.display = 'none';
+        }
+    });
+    document.getElementById("passlw").addEventListener('input', () => {
+        if (document.getElementById("passlw").value) {
+            document.getElementById("hyvchyvc").style.display = 'block';
+        } else {
+            document.getElementById("hyvchyvc").style.display = 'none';
+        }
+    });
+    document.getElementById("namellolkihg").addEventListener('input', () => {
+        if (document.getElementById("namellolkihg").value) {
+            document.getElementById("ljkjjjjjgctxf").style.display = 'block';
+        } else {
+            document.getElementById("ljkjjjjjgctxf").style.display = 'none';
+        }
+    });
+
+    ljkjjjjjgctxf.addEventListener("click", () => {
+        namellolkihg.value = "";
+        ljkjjjjjgctxf.style.display = 'none';
+    });
+
+
+
+
+
+
+
+
+
+
+
+    document.getElementById("emaillskbiuv").addEventListener('input', () => {
+        if (document.getElementById("emaillskbiuv").value) {
+            document.getElementById("ljkflhvuyvyvyjkf").style.display = 'block';
+        } else {
+            document.getElementById("ljkflhvuyvyvyjkf").style.display = 'none';
+        }
+    });
+
+    document.getElementById("ljkflhvuyvyvyjkf").addEventListener("click", () => {
+    document.getElementById("emaillskbiuv").value = "";
+        document.getElementById("ljkflhvuyvyvyjkf").style.display = 'none';
+    });
+
+
+
+
+
+
+    document.getElementById("passhjvhvls").addEventListener('input', () => {
+        if (document.getElementById("passhjvhvls").value) {
+            document.getElementById("hhvhhhihy074").style.display = 'block';
+        } else {
+            document.getElementById("hhvhhhihy074").style.display = 'none';
+        }
+    });
+
+    document.getElementById("hhvhhhihy074").addEventListener("click", () => {
+    document.getElementById("passhjvhvls").value = "";
+        document.getElementById("hhvhhhihy074").style.display = 'none';
+    });
+    emailClearIcon.addEventListener("click", () => {
+        document.getElementById("passhjvhvls").value = "";
+        document.getElementById("hhvhhhihy074").style.display = 'none';
+    });
+
+
+
+
 document.title="Daraz-Login"
 
 var signform = document.getElementById("qwetvdtc")
@@ -165,8 +276,119 @@ remoad.classList.add("bg-warning")
 remoad.classList.remove("bg-success")
     })
 
+     
 
+    document.getElementById('lmlm').addEventListener('click', function() {
+        console.log("fast");
+        document.getElementById('fanImage').style.animation = "rotateFan 1s linear infinite";
+        document.getElementById('openfan').innerText = "Fan Types";
+    });
 
+    document.getElementById('stopf').addEventListener("click", () => {
+        document.getElementById('fanImage').style.animation = "none";
+        document.getElementById('openfan').innerText = "Open Fan";
+    });
+    const productsPerPage = 5;
+    let currentPage = 1;
+    let totalProducts = 0;
+    let currentCategory = '';  // Add this to keep track of the current category
+    
+    async function fetchProducts(page, category) {
+        const skip = (page - 1) * productsPerPage;
+        try {
+            const response = await fetch(`https://dummyjson.com/products/category/${category}?limit=${productsPerPage}&skip=${skip}&select=title,price,thumbnail,rating`);
+            const data = await response.json();
+            totalProducts = data.total;
+            return data.products;
+        } catch (error) {
+            console.error('Error fetching products:', error);
+            return [];
+        }
+    }
+    
+    function displayProducts(products) {
+        const cateoppagepokolo = document.getElementById("cateoppagepokolo");
+        cateoppagepokolo.innerHTML = '';
+    
+        products.forEach((product) => {
+            cateoppagepokolo.innerHTML += `
+            <div id="cardf6ygy">
+                <img src="${product.thumbnail}" alt="${product.title}">
+                <h2>${product.title}</h2>
+                <h3>Rs.${product.price}</h3>
+                <h5>Rating: ${product.rating}</h5>
+            </div>
+            `;
+        });
+    }
+    
+    function renderPagination() {
+        const totalPages = Math.ceil(totalProducts / productsPerPage);
+        const pagination = document.querySelector('.pagination');
+        pagination.innerHTML = '';
+    
+        const prevDisabled = currentPage === 1 ? 'disabled' : '';
+        const nextDisabled = currentPage === totalPages ? 'disabled' : '';
+    
+        pagination.innerHTML += `<button onclick="goToPage(${currentPage - 1})" ${prevDisabled}>Previous</button>`;
+        pagination.innerHTML += `<span id="optext">Page ${currentPage} of ${totalPages}</span>`;
+        pagination.innerHTML += `<button onclick="goToPage(${currentPage + 1})" ${nextDisabled}>Next</button>`;
+    }
+    
+    async function goToPage(page) {
+        if (page < 1 || page > Math.ceil(totalProducts / productsPerPage)) {
+            return;
+        }
+        currentPage = page;
+        const products = await fetchProducts(currentPage, currentCategory);
+        displayProducts(products);
+        renderPagination();
+    }
+    
+    // Make goToPage globally accessible
+    window.goToPage = goToPage;
+    
+    // Adding click event listener to category elements
+    const categoryElements = document.querySelectorAll(".samcate");
+    
+    categoryElements.forEach(element => {
+        element.addEventListener("click", async (e) => {
+            const h5Element = e.currentTarget.querySelector("h5");
+            document.querySelector("body").style.backgroundColor="rgb(255, 247, 247)"
+            if (h5Element) {
+                const categoryName = h5Element.textContent;
+                console.log("Selected category:", categoryName);
+    
+                currentCategory = categoryName;  // Set the current category
+                currentPage = 1;
+                const products = await fetchProducts(currentPage, currentCategory);
+                displayProducts(products);
+                renderPagination();
+    
+                const cateoppage = document.getElementById("cateoppage");
+                cateoppage.style.display = "flex";
+                document.getElementById("popup").style.display = "none";
+                loginform.style.display = "none";
+                signform.style.display = "none";
+                document.querySelector(".fullpages").style.display = "none";
+                document.title = categoryName;
+                document.getElementById("cateoppageh1").innerText = categoryName;
+            }
+        });
+    });
+    
+    // Adding click event listener to go back button
+    const back = document.getElementById("back");
+    back.addEventListener("click", () => {
+        const cateoppage = document.getElementById("cateoppage");
+        cateoppage.style.display = "none";
+        document.getElementById("popup").style.display = "flex";
+        loginform.style.display = "none";
+        signform.style.display = "none";
+        document.querySelector(".fullpages").style.display = "block";
+        document.title = "Daraz";
+        document.querySelector("body").style.backgroundColor="white"
+    });
     
 })
 
@@ -230,39 +452,5 @@ for (let i = 0; i < 100; i++) {
     //     window.location.href="./offline.html"
     // }
     
-function onFunction(){
-    var oiuytr = document.getElementById("plojin")
-    oiuytr.style.display="none"
-
-    var signform = document.getElementById("qwetvdtc")
-    var loginform = document.getElementById("igujsz")
-    
-    document.title="Daraz-Login"
-    loginform.style.display="block"
-    signform.style.display="none"
-    loginform.style.display="flex"
-    loginform.style.justifyContent="center"
-
-   
-}
-function offFunction(){
-    var oiuytr = document.getElementById("plojin")
-    var ub = document.getElementById("cokolop")
-    document.title="Daraz-Offline"
-    oiuytr.style.display="block"
-    oiuytr.style.display="flex"
-    document.getElementById("popup").style.display="none"
-    oiuytr.style.justifyContent="center"   
-    oiuytr.style.alignItems="center"   
-    
- 
-    var werfghnbvcvbnmmnbgtyhb= document.getElementById("ssdsdsd")
-    werfghnbvcvbnmmnbgtyhb.style.display="none"
-    var signform = document.getElementById("qwetvdtc")
-    var loginform = document.getElementById("igujsz")
-    
-    
-    loginform.style.display="none"
-}
 
 
