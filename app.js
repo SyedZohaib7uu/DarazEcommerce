@@ -278,16 +278,6 @@ remoad.classList.remove("bg-success")
 
      
 
-    document.getElementById('lmlm').addEventListener('click', function() {
-        console.log("fast");
-        document.getElementById('fanImage').style.animation = "rotateFan 1s linear infinite";
-        document.getElementById('openfan').innerText = "Fan Types";
-    });
-
-    document.getElementById('stopf').addEventListener("click", () => {
-        document.getElementById('fanImage').style.animation = "none";
-        document.getElementById('openfan').innerText = "Open Fan";
-    });
     const productsPerPage = 5;
     let currentPage = 1;
     let totalProducts = 0;
@@ -353,6 +343,7 @@ remoad.classList.remove("bg-success")
     
     categoryElements.forEach(element => {
         element.addEventListener("click", async (e) => {
+            document.getElementById("ssdsdsd").style.display="none"
             const h5Element = e.currentTarget.querySelector("h5");
             document.querySelector("body").style.backgroundColor="rgb(255, 247, 247)"
             if (h5Element) {
@@ -382,7 +373,7 @@ remoad.classList.remove("bg-success")
     back.addEventListener("click", () => {
         const cateoppage = document.getElementById("cateoppage");
         cateoppage.style.display = "none";
-        document.getElementById("popup").style.display = "flex";
+        
         loginform.style.display = "none";
         signform.style.display = "none";
         document.querySelector(".fullpages").style.display = "block";
@@ -393,46 +384,12 @@ remoad.classList.remove("bg-success")
 })
 
 
-var imk = ["https://icms-image.slatic.net/images/ims-web/04ad7559-e98d-4445-8781-70cfdf4ca938.jpg_1200x1200.jpg","https://icms-image.slatic.net/images/ims-web/495ae49c-b1c1-437e-ac0e-788a0123959d.jpeg","https://icms-image.slatic.net/images/ims-web/e1111741-2a26-4c79-bbdf-f66cc5a5ecc0.png","https://icms-image.slatic.net/images/ims-web/7abefc2d-0044-490c-896f-4b83c42a3e9b.jpeg",]
-// const imk = ['image1.jpg', 'image2.jpg', 'image3.jpg']; // Replace with your actual image URLs
-
-for (let i = 0; i < 100; i++) {
-    setTimeout(() => {
-        // Select a random image for each iteration
-        const math = imk[Math.floor(Math.random() * imk.length)];
-
-        // console.log(math);
-        document.getElementById("popup").innerHTML = `
-            <div id="opgt" class="papapop">
-                <div class="pophe">
-                    <p></p>
-                    <p style="background:linear-gradient(90deg,#00dbde,#fc00ff);
-                               -webkit-background-clip:text;
-                               -webkit-text-fill-color:transparent;
-                               font-size: 25px;
-                               font-weight: 700;">
-                        Ads
-                    </p>
-                    <i style="font-size: 38px; cursor: pointer; color: black;" id="oplopiikopm" class="ri-close-line"></i>
-                </div>
-                <div class="pobo">
-                    <img id="poplop" src="${math}" alt="">
-                </div><br>
-            </div>
-        `;
-        var varr = document.getElementById("oplopiikopm");
-        varr.addEventListener("click", () => {
-            console.log("lop");
-            document.getElementById("opgt").style.display = "none";
-            console.log("lop");
-        })
-    }, i * 5000); 
     // Each ad appears 5 seconds after the previous one
 
 
 
 
-}
+
 
 // function onFunction() {
 //     alert ("Your browser is working online.");

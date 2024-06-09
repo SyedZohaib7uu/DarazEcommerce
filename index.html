@@ -18,7 +18,7 @@
 </head>
 <body>
   <div style=" 
-    height: 100vh;
+
     width: 100%;
     background-color: #F85606;
     color: white;
@@ -29,27 +29,27 @@
 display: none;
 
 " id="plojin" class="onofline">
-    
+  
+<div style="text-align: center;" class="oshidv2yctwyqauiowyuavxubinjcohguy">
+
     <img src="./img/f.png" id="cokolop" alt="">
-<div style="
+   <h2 style="font-size: 40px;font-weight: 700;">You Are OffLine</h2>
+   <h3 style="font-size: 20px;">Check Your Internet</h3>
+   <div  style="height: 100px;width: 100px;" class="spinner-border text-light" role="status">
+  <span  class="visually-hidden">Loading...</span>
+</div>
+</div>
+ 
+
    
-    text-align: center;
-" id="cocovo" class="cover">
-        <h1>You are offline</h1>
-        <p>Please check your internet connection and try again.</p>
-        <div style="
-            display: flex;
-            width: 100%;
-            text-align: center;
-        justify-content: center;
-        " class="con">
-            
-            <div style="text-align: center; padding: 50px;font-size: 20px;" class="spinner-border" role="status">
-            <span class="visually-hidden">Loading...  </span>
+      
         </div>
     </div>
-    </div>
-  </div>
+  
+  
+
+
+</div>
   
   
     <div id="igujsz" class="main">
@@ -139,9 +139,7 @@ display: none;
         </form>
     </div>
 </div>
-<div id="popup">
 
-   </div>
    <div id="cateoppage">
     <div id="cateoppageopppij">
 
@@ -403,7 +401,7 @@ import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.1/fireba
     
     import { getAuth,createUserWithEmailAndPassword, signInWithEmailAndPassword, signOut, onAuthStateChanged, signInWithPopup, GoogleAuthProvider,FacebookAuthProvider  } from "https://www.gstatic.com/firebasejs/10.12.1/firebase-auth.js";
     
-    document.addEventListener('DOMContentLoaded', (event) => {
+    
  
       
 
@@ -564,9 +562,8 @@ submitloginl.addEventListener("click", function() {
      alert(errorMessage);
   });
 
-})
-
-
+  
+  
   
 
         // authentication   
@@ -653,6 +650,17 @@ document.querySelector(".fbtn").addEventListener("click",()=>{
   });
     })
 
+   var rtyhvshycyx= document.getElementById('lmlm')
+   rtyhvshycyx.addEventListener('click', function() {
+        console.log("fast");
+        document.getElementById('fanImage').style.animation = "rotateFan 1s linear infinite";
+     
+    });
+
+    document.getElementById('stopf').addEventListener("click", () => {
+        document.getElementById('fanImage').style.animation = "none";
+       
+    });
 document.querySelector(".gsbtn").addEventListener("click",()=>{
     signInWithPopup(auth, provider)
   .then((result) => {
@@ -683,6 +691,7 @@ document.querySelector(".gsbtn").addEventListener("click",()=>{
 
 })
 
+
 window.onload = function() {
         checkNetworkStatus();
     
@@ -706,11 +715,7 @@ window.onload = function() {
             document.title="Daraz-Offline"
             oiuytr.style.display="block"
             oiuytr.style.display="flex"
-            document.getElementById("popup").style.display="none"
-            oiuytr.style.justifyContent="center"   
-            oiuytr.style.alignItems="center"   
-            
-         
+           
         document.getElementById("ssdsdsd").style.display="none"
             var signform = document.getElementById("qwetvdtc")
             var loginform = document.getElementById("igujsz")
@@ -740,16 +745,24 @@ onAuthStateChanged(auth, (user) => {
     // User is signed in, see docs for a list of available properties
     // https://firebase.google.com/docs/reference/js/auth.user
     const uid = user.uid;
+
+
+
    var rr= document.getElementById("cateoppage")
    rr.style.display="none"
     // ...
-    document.getElementById("popup").style.display="flex"
+  
     loginform.style.display="none"
             signform.style.display="none"
             document.querySelector(".fullpages").style.display="block"
             document.title="Daraz"
               const email = user.email;
             document.getElementById("id").textContent=user.email
+
+document.getElementById("ssdsdsd").style.display="none"
+ 
+
+
 //   document.querySelector(".fullpages").innerHTML=email
 } else {
      
@@ -771,11 +784,13 @@ onAuthStateChanged(auth, (user) => {
      document.getElementById("ssdsdsd").style.display="none"
      
     document.getElementById("popup").style.display="none"
-  }
-});
-   
-    });
+    document.getElementById("plojin").style.display="block"
 
+  }
+
+});
+
+})
     </script>
 </body>
 </html>
