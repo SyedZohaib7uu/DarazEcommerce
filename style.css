@@ -224,7 +224,7 @@ text-align: center;
 .fullpages{
     width: 100%;
     height: 100%;
-    display: none;
+    /* display: none; */
 }
 .fco{
     /* background-color: red; */
